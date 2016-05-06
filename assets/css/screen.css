@@ -1037,9 +1037,7 @@ body:not(.post-template) .post-title {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  /* for Safari and iOS */
-  /* for IE9 */
-  transform: translateX(-50%); }
+          transform: translateX(-50%); }
 
 .footnotes {
   font-style: italic;
