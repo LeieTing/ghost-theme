@@ -512,7 +512,7 @@ margin on the iframe, cause it breaks stuff. */
 body.nav-opened .site-wrapper {
   overflow-x: hidden;
   -webkit-transform: translate3D(-240px, 0, 0);
-  transform: translate3D(-240px, 0, 0);
+          transform: translate3D(-240px, 0, 0);
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease; }
@@ -571,7 +571,7 @@ body.nav-opened .nav-cover {
 
 body.nav-closed .nav {
   -webkit-transform: translate3D(97px, 0, 0);
-  transform: translate3D(97px, 0, 0); }
+          transform: translate3D(97px, 0, 0); }
 
 body.nav-opened .nav {
   opacity: 1;
@@ -579,7 +579,7 @@ body.nav-opened .nav {
   transition: transform 0.3s ease, opacity 0s ease 0s;
   transition: transform 0.3s ease, opacity 0s ease 0s, -webkit-transform 0.3s ease;
   -webkit-transform: translate3D(0, 0, 0);
-  transform: translate3D(0, 0, 0); }
+          transform: translate3D(0, 0, 0); }
 
 .nav-title {
   position: absolute;
@@ -615,11 +615,11 @@ body.nav-opened .nav {
 
 .nav-close:before {
   -webkit-transform: rotate(45deg);
-  transform: rotate(45deg); }
+          transform: rotate(45deg); }
 
 .nav-close:after {
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
+          transform: rotate(-45deg); }
 
 .nav-close:hover:before,
 .nav-close:hover:after {
@@ -720,15 +720,15 @@ body.nav-opened .nav {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
   -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+          transform: rotate(-90deg);
   -webkit-animation: bounce 4s 2s infinite;
-  animation: bounce 4s 2s infinite; }
+          animation: bounce 4s 2s infinite; }
 
 /* Stop it bouncing and increase contrast when hovered */
 .scroll-down:hover {
   color: #fff;
   -webkit-animation: none;
-  animation: none; }
+          animation: none; }
 
 /* Put a semi-opaque radial gradient behind the icon to make it more visible
    on photos which happen to have a light background. */
@@ -821,7 +821,7 @@ body.nav-opened .nav {
   border-color: #111;
   color: #fff;
   -webkit-transform: translate3D(94px, 0, 0);
-  transform: translate3D(94px, 0, 0);
+          transform: translate3D(94px, 0, 0);
   transition: all 0.3s ease; }
 
 .nav-opened .menu-button .word {
@@ -873,15 +873,15 @@ body.nav-opened .nav {
 /* Add subtle load-in animation for content on the home page */
 .home-template .page-title {
   -webkit-animation: fade-in-down 0.6s;
-  animation: fade-in-down 0.6s;
+          animation: fade-in-down 0.6s;
   -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s; }
+          animation-delay: 0.2s; }
 
 .home-template .page-description {
   -webkit-animation: fade-in-down 0.9s;
-  animation: fade-in-down 0.9s;
+          animation: fade-in-down 0.9s;
   -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s; }
+          animation-delay: 0.1s; }
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
@@ -1240,6 +1240,110 @@ body:not(.post-template) .post-title {
   display: none; }
 
 /* ==========================================================================
+   7. Read More - Next/Prev Post Links
+   ========================================================================== */
+.read-next {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-top: 10rem; }
+
+.read-next-story {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 50%;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background: #222 no-repeat center center;
+  background-size: cover;
+  overflow: hidden; }
+
+.read-next-story:hover:before {
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease; }
+
+.read-next-story:hover .post:before {
+  color: #222;
+  background: #fff;
+  transition: all 0.2s ease; }
+
+.read-next-story:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease; }
+
+.read-next-story .post {
+  padding-top: 6rem;
+  padding-bottom: 6rem; }
+
+.read-next-story .post:before {
+  content: "Read This Next";
+  padding: 4px 10px 5px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-family: "Open Sans", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  border: rgba(255, 255, 255, 0.5) 1px solid;
+  border-radius: 4px;
+  transition: all 0.5s ease; }
+
+.read-next-story.prev .post:before {
+  content: "You Might Enjoy"; }
+
+.read-next-story h2 {
+  margin-top: 1rem;
+  color: #fff; }
+
+.read-next-story p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8); }
+
+/* Special styles for posts with no cover images */
+.read-next-story.no-cover {
+  background: #f5f8fa; }
+
+.read-next-story.no-cover:before {
+  display: none; }
+
+.read-next-story.no-cover .post:before {
+  color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.2); }
+
+.read-next-story.no-cover h2 {
+  color: rgba(0, 0, 0, 0.8); }
+
+.read-next-story.no-cover p {
+  color: rgba(0, 0, 0, 0.5); }
+
+/* if there are two posts without covers, put a border between them */
+.read-next-story.no-cover + .read-next-story.no-cover {
+  border-left: rgba(0, 0, 100, 0.04) 1px solid;
+  box-sizing: border-box; }
+
+/* Correctly position site-footer when next to the .read-next container */
+.read-next + .site-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0; }
+
+/* ==========================================================================
    8. Third Party Elements - Embeds from other services
    ========================================================================== */
 /* Github */
@@ -1431,8 +1535,8 @@ body:not(.post-template) .post-title {
     padding: 0; }
   .read-next {
     -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 4rem; }
   .read-next p {
     display: none; }
@@ -1603,44 +1707,42 @@ body:not(.post-template) .post-title {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-10px);
-    transform: translateY(-10px); }
+            transform: translateY(-10px); }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
-    transform: translateY(0); } }
-
+            transform: translateY(0); } }
 @keyframes fade-in-down {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-10px);
-    transform: translateY(-10px); }
+            transform: translateY(-10px); }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
-    transform: translateY(0); } }
+            transform: translateY(0); } }
 
 /* Used to bounce .scroll-down on home page */
 @-webkit-keyframes bounce {
-  0%, 10%, 25%, 40%, 50% {
+  0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0) rotate(-90deg);
-    transform: translateY(0) rotate(-90deg); }
-  20% {
+            transform: translateY(0) rotate(-90deg); }
+  40% {
     -webkit-transform: translateY(-10px) rotate(-90deg);
-    transform: translateY(-10px) rotate(-90deg); }
-  30% {
+            transform: translateY(-10px) rotate(-90deg); }
+  60% {
     -webkit-transform: translateY(-5px) rotate(-90deg);
-    transform: translateY(-5px) rotate(-90deg); } }
-
+            transform: translateY(-5px) rotate(-90deg); } }
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0) rotate(-90deg);
-    transform: translateY(0) rotate(-90deg); }
+            transform: translateY(0) rotate(-90deg); }
   40% {
     -webkit-transform: translateY(-10px) rotate(-90deg);
-    transform: translateY(-10px) rotate(-90deg); }
+            transform: translateY(-10px) rotate(-90deg); }
   60% {
     -webkit-transform: translateY(-5px) rotate(-90deg);
-    transform: translateY(-5px) rotate(-90deg); } }
+            transform: translateY(-5px) rotate(-90deg); } }
 
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
