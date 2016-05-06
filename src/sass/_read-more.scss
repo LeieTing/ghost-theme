@@ -3,25 +3,13 @@
    ========================================================================== */
 
 .read-next {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch;
     margin-top: 10rem;
 }
 
 .read-next-story {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
     min-width: 50%;
     text-decoration: none;
@@ -109,8 +97,6 @@
 /* if there are two posts without covers, put a border between them */
 .read-next-story.no-cover + .read-next-story.no-cover {
     border-left: rgba(0,0,100,0.04) 1px solid;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 

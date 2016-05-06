@@ -9,8 +9,6 @@
     }
 
     .main-header {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
         box-sizing: border-box;
         height: auto;
         min-height: 240px;
@@ -116,10 +114,6 @@
     }
 
     .read-next {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
         flex-direction: column;
         margin-top: 4rem;
     }
