@@ -2,7 +2,7 @@
   "name": "Leieting",
   "version": "2.0.0",
   "scripts": {
-    "init": "gulp"
+    "start": "gulp watch"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
