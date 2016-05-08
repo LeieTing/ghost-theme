@@ -11,8 +11,10 @@ gulp.task('styles', function() {
       browsers: ['last 2 versions']
     }))
     .pipe(gulp.dest('assets/css'));
-})
+});
 
-gulp.task('default', function() {
+gulp.task('default', ['styles']);
+
+gulp.task('watch', ['default'], function() {
   gulp.watch('src/sass/**/*.scss', ['styles']);
 });
