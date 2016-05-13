@@ -1746,3 +1746,7 @@ body:not(.post-template) .post-title {
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
    ========================================================================== */
+img.retina{
+   max-width:50%;
+   max-height:50%;
+}
