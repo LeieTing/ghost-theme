@@ -67,6 +67,31 @@ body.nav-opened .nav {
     transform: translate3D(0, 0, 0);
 }
 
+.leieting-button {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    height: 38px;
+    padding: 0 20px;
+    color: #fff !important; /* Overides `.nav a:link, .nav a:visited` colour */
+    text-align: center;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 35px;
+    border-radius: 0px;
+    background: #1C9857;
+    transition: all ease 0.3s;
+}
+.leieting-button:before {
+    font-size: 9px;
+    margin-right: 6px;
+}
+
 .nav-title {
     position: absolute;
     top: 45px;
@@ -191,7 +216,7 @@ body.nav-opened .nav {
     text-transform: uppercase;
     text-decoration: none;
     line-height: 35px;
-    border-radius: 3px;
+    border-radius: 0px;
     background: #fff;
     transition: all ease 0.3s;
 }
