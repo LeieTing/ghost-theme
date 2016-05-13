@@ -1301,7 +1301,7 @@ body:not(.post-template) .post-title {
   transition: all 0.5s ease; }
 
 .read-next-story.prev .post:before {
-  content: "You Might Enjoy"; }
+  content: "Du vil kanskje like"; }
 
 .read-next-story h2 {
   margin-top: 1rem;
