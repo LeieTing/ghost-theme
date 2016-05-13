@@ -1290,7 +1290,7 @@ body:not(.post-template) .post-title {
   padding-bottom: 6rem; }
 
 .read-next-story .post:before {
-  content: "Read This Next";
+  content: "Fortsett å lese";
   padding: 4px 10px 5px;
   text-transform: uppercase;
   font-size: 1.1rem;
