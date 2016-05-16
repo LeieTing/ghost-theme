@@ -27,7 +27,7 @@
 
 .main-nav a {
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', helvetica, sans-serif;
 }
 
 /* Navigation */
@@ -48,7 +48,7 @@ body.nav-opened .nav-cover {
     z-index: 5;
     width: 240px;
     opacity: 0;
-    background: #111;
+    background: #1C9857;
     margin-bottom: 0;
     text-align: left;
     overflow-y: auto;
@@ -71,6 +71,7 @@ body.nav-opened .nav {
     position: absolute;
     top: 45px;
     left: 30px;
+    font-family: 'Lato', helvetica, sans-serif;
     font-size: 16px;
     font-weight: 100;
     text-transform: uppercase;
@@ -98,7 +99,7 @@ body.nav-opened .nav {
     top: 0;
     width: 20px;
     height: 1px;
-    background: rgb(150,150,150);
+    background: #fff;
     top: 15px;
     transition: background 0.15s ease;
 }
@@ -184,7 +185,7 @@ body.nav-opened .nav {
     right: 30px;
     height: 38px;
     padding: 0 20px;
-    color: #fff !important; /* Overides `.nav a:link, .nav a:visited` colour */
+    color: #1C9857 !important; /* Overides `.nav a:link, .nav a:visited` colour */
     text-align: center;
     font-size: 12px;
     font-family: "Open Sans", sans-serif;
@@ -192,7 +193,7 @@ body.nav-opened .nav {
     text-decoration: none;
     line-height: 35px;
     border-radius: 0px;
-    background: #1C9857;
+    background: #fff;
     transition: all ease 0.3s;
 }
 .subscribe-button:before {
@@ -278,7 +279,7 @@ body.nav-opened .nav {
     text-transform: uppercase;
     line-height: 35px;
     white-space: nowrap;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
     transition: all 0.5s ease;
 }
 .menu-button:before {
@@ -289,7 +290,7 @@ body.nav-opened .nav {
     top: 1px;
 }
 .menu-button:hover {
-    background: #fff;
+    background: #1C9857;
 }
 .menu-button:focus {
     outline: 0;
@@ -306,19 +307,21 @@ body.nav-opened .nav {
 
 /* When the navigation is closed and there is no cover image */
 .nav-closed .no-cover .menu-button {
+    font-family: 'Lato', helvetica, sans-serif;
     border-color: #BFC8CD;
     color: #9EABB3;
 }
 .nav-closed .no-cover .menu-button:hover {
-    border-color: #555;
-    color: #555;
+    font-family: 'Lato', helvetica, sans-serif;
+    border-color: #fff;
+    color: #fff;
 }
 
 /* When the navigation is opened */
 .nav-opened .menu-button {
     padding: 0 12px;
-    background: #111;
-    border-color: #111;
+    background: #1C9857;
+    border-color: #fff;
     color: #fff;
     transform: translate3D(94px, 0, 0);
     transition: all 0.3s ease;
