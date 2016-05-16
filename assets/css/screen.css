@@ -789,7 +789,9 @@ body.nav-opened .nav {
   border-color: rgba(255, 255, 255, 0.6); }
 
 .nav-closed .menu-button:hover {
-  color: #222; }
+  font-family: 'Lato', helvetica, sans-serif;
+  border-color: #fff;
+  color: #fff; }
 
 /* When the navigation is closed and there is no cover image */
 .nav-closed .no-cover .menu-button {
@@ -806,7 +808,7 @@ body.nav-opened .nav {
 .nav-opened .menu-button {
   padding: 0 12px;
   background: #1C9857;
-  border-color: #fff;
+  /*border-color: #fff;*/
   color: #fff;
   transform: translate3D(94px, 0, 0);
   transition: all 0.3s ease; }
