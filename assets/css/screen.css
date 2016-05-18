@@ -1187,7 +1187,7 @@ body:not(.post-template) .post-title {
   box-sizing: border-box;
   display: block;
   position: absolute;
-  top: -60px;
+  top: -40px;
   left: 50%;
   margin-left: -40px;
   width: 80px;
@@ -1697,6 +1697,8 @@ body:not(.post-template) .post-title {
     height: 20vh; }
   .author-profile .author-image {
     margin-top: -70px; }
+  .author-image {
+    top: -60px; }
   .author-profile .author-meta span {
     font-size: 1.4rem; }
   .archive-template .main-header .page-description {
