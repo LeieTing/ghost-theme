@@ -259,10 +259,12 @@ body {
   text-rendering: geometricPrecision; }
 
 ::-moz-selection {
-  background: #D6EDFF; }
+  background: #32AE6B;
+  color: white; }
 
 ::selection {
-  background: #D6EDFF; }
+  background: #32AE6B;
+  color: white; }
 
 h1, h2, h3,
 h4, h5, h6 {
@@ -661,14 +663,13 @@ body.nav-opened .nav {
 
 .nav a:link,
 .nav a:visited {
-  color: #fff; }
+  color: #dbdbdb; }
 
 .nav li.nav-current a,
 .nav a:hover,
 .nav a:active,
 .nav a:focus {
-  color: #fff;
-  font-weight: bold; }
+  color: #fff; }
 
 .subscribe-button {
   box-sizing: border-box;
@@ -942,6 +943,23 @@ body:not(.post-template) .post-title {
   font-size: 1.3rem;
   white-space: nowrap; }
 
+.post-tags  {
+  display: inline-block;
+  margin-left: 8px;
+  padding-left: 12px;
+  border-left: #d5dbde 1px solid;
+  font-size: 1.3rem;
+  white-space: nowrap; }
+
+.post-feature {
+  display: inline-block;
+  margin-left: 8px;
+  padding-left: 12px;
+  border-left: #d5dbde 1px solid;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  white-space: nowrap; }
+
 .user-image {
   position: absolute;
   top: 0;
@@ -972,6 +990,21 @@ body:not(.post-template) .post-title {
   display: block;
   font-size: 1.4rem;
   line-height: 1.5em; }
+
+.featured-post .img {
+  position: center;
+  max-width: 100%;
+  padding: 4.3rem 0 4rem 0; }
+
+.post-image {
+  width: 100%;
+  padding-top: 38%;
+  text-indent: -9999px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 1.8rem;
+  display: block; }
 
 /* ==========================================================================
    5. Single Post - When you click on an individual post
@@ -1154,7 +1187,7 @@ body:not(.post-template) .post-title {
   box-sizing: border-box;
   display: block;
   position: absolute;
-  top: -40px;
+  top: -60px;
   left: 50%;
   margin-left: -40px;
   width: 80px;
