@@ -1006,6 +1006,27 @@ body:not(.post-template) .post-title {
   margin-bottom: 1.8rem;
   display: block; }
 
+button {
+  background: #32AE6B;
+  color: white;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 1.5rem; }
+
+button:hover {
+  background: #1C9857; }
+
+.text-input {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.postal-code {
+  max-width: 70%; }
+
+.postal-area {
+  max-width: 30%; }
+
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
