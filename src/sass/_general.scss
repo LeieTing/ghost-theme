@@ -73,7 +73,7 @@ body.nav-opened .nav {
     left: 30px;
     font-family: 'Lato', helvetica, sans-serif;
     font-size: 16px;
-    
+
     text-transform: uppercase;
     color: #fff;
 }
@@ -434,6 +434,7 @@ body:not(.post-template) .post-title {
 
 .read-more {
     text-decoration: none;
+    color: #32AE6B;
 }
 
 .post-meta {
@@ -566,7 +567,7 @@ button:hover {
 .text-input {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    
+
 }
 
 .postal-code {

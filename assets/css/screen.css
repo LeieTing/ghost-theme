@@ -905,7 +905,8 @@ body:not(.post-template) .post-title {
   line-height: 1.7em; }
 
 .read-more {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #32AE6B; }
 
 .post-meta {
   display: block;
