@@ -1591,7 +1591,7 @@ button:hover {
     padding: 5px;
     margin-bottom: 2rem; }
   .blog-logo {
-    padding: 5px; }
+    padding: 0px 5px; }
   .blog-logo img {
     height: 46px; }
   .menu-button {
