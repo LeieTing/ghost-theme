@@ -1593,13 +1593,14 @@ button:hover {
   .blog-logo {
     padding: 5px; }
   .blog-logo img {
-    height: 34px; }
+    height: 46px; }
   .menu-button {
     padding: 0 5px;
     border-radius: 0;
     border-width: 0;
     color: #2e2e2e;
-    background: transparent; }
+    background: transparent;
+    font-size: 16px; }
   .menu-button:hover {
     color: #2e2e2e;
     border-color: transparent;
