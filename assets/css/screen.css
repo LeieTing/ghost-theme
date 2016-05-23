@@ -3900,6 +3900,8 @@ button:hover {
     min-width: 0;
     max-width: 112%;
     /* fallback when calc doesn't work */ }
+  img.alt-image {
+    width: auto; }
   .post-meta {
     font-size: 1.3rem;
     margin-top: 1rem; }
