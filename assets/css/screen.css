@@ -3448,6 +3448,27 @@ button:hover {
 .archive-template .author-profile .author-meta {
   display: none; }
 
+.team-grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.team-grid__item {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0 20px 50px; }
+
+.author-card {
+  text-align: center;
+  padding: 20px; }
+  .author-card__heading {
+    font-size: 2rem;
+    letter-spacing: inherit;
+    text-indent: inherit; }
+  .author-card__social a {
+    text-decoration: none; }
+
 /* ==========================================================================
    7. Read More - Next/Prev Post Links
    ========================================================================== */
