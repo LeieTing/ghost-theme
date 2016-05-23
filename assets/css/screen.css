@@ -3458,14 +3458,22 @@ button:hover {
   box-sizing: border-box;
   width: 50%;
   padding: 0 20px 50px; }
+  @media (max-width: 400px) {
+    .team-grid__item {
+      width: 100%; } }
 
 .author-card {
   text-align: center;
   padding: 20px; }
+  .author-card__profile-picture img {
+    max-width: 100%; }
   .author-card__heading {
     font-size: 2rem;
     letter-spacing: inherit;
     text-indent: inherit; }
+    @media (max-width: 500px) {
+      .author-card__heading {
+        font-size: 1.5rem; } }
   .author-card__social a {
     text-decoration: none; }
 
