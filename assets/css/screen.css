@@ -906,7 +906,7 @@ body:not(.post-template) .post-title {
 
 .read-more {
   text-decoration: none;
-  color: #32AE6B; }
+  color: #1C9857; }
 
 .post-meta {
   display: block;
@@ -1593,7 +1593,7 @@ button:hover {
   .blog-logo {
     padding: 0px 5px; }
   .blog-logo img {
-    height: 46px; }
+    height: 40px; }
   .menu-button {
     padding: 0 5px;
     border-radius: 0;
