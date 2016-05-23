@@ -1,0 +1,119 @@
+{{!< default}}
+
+{{#post}}
+
+<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        {{#if @blog.navigation}}
+            <a class="menu-button icon-menu" href="#"><span class="word">Meny</span></a>
+        {{/if}}
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="{{post_class}}">
+
+        <header class="post-header">
+            <h1 class="post-title">{{title}}</h1>
+        </header>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+        <section class="team-grid">
+          <div class="team-grid__item">
+            <article class="author-card">
+              <a href="/author/bjorn/" class="author-card__profile-picture">
+                <img src="{{asset 'img/bjorn-avatar.png'}}" alt="Bjørn Reidar Ur">
+              </a>
+              <h1 class="author-card__heading">Bjørn Reidar Ur</h1>
+              <div class="author-card__social">
+                <a href="https://twitter.com/bjornreidarur">
+                  <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="team-grid__item">
+            <article class="author-card">
+              <a href="/author/christer/" class="author-card__profile-picture">
+                <img src="{{asset 'img/christer-avatar.png'}}" alt="Christer Hansen Eriksen">
+              </a>
+              <h1 class="author-card__heading">Christer Hansen Eriksen</h1>
+              <div class="author-card__social">
+                <a href="https://twitter.com/chreriksen">
+                  <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/chreriksen">
+                  <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="team-grid__item">
+            <article class="author-card">
+              <a href="/author/kim/" class="author-card__profile-picture">
+                <img src="{{asset 'img/kim-avatar.png'}}" alt="Kim Røen">
+              </a>
+              <h1 class="author-card__heading">Kim Røen</h1>
+              <div class="author-card__social">
+                <a href="https://twitter.com/kimroen">
+                  <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/kimroen">
+                  <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/kimroen">
+                  <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="team-grid__item">
+            <article class="author-card">
+              <a href="/author/thomas/" class="author-card__profile-picture">
+                <img src="{{asset 'img/thomas-avatar.png'}}" alt="Thomas Sunde Nielsen">
+              </a>
+              <h1 class="author-card__heading">Thomas Sunde Nielsen</h1>
+              <div class="author-card__social">
+                <a href="https://twitter.com/thomassnielsen">
+                  <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/thomassnielsen">
+                  <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/thomassnielsen">
+                  <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="post-content">
+          <h3 id="faktaomleietingno">Fakta om Leieting.no</h3>
+
+          <ul>
+            <li>Startet av Bjørn, Christer, Kim og Thomas</li>
+            <li>Lansert 13. november 2015</li>
+            <li>Hele Norges markedsplass for leie av ting med brukere i hele landet</li>
+            <li>Mottatt etablerertilskudd fra Innovasjon Norge</li>
+            <li>28 av dagens medeiere startet som brukere av tjenesten</li>
+            <li>Laget med 💚 i Bergen</li>
+          </ul>
+
+          <h3 id="samarbeidspartnere">Samarbeidspartnere</h3>
+          <p>
+            <img class="alt-image" src="{{asset 'img/if.svg'}}" alt="If">
+          </p>
+          <p>
+            <img class="alt-image" src="{{asset 'img/innovasjon-norge.svg'}}" alt="Innovasjon Norge">
+          </p>
+          <p>
+            <img class="alt-image" src="{{asset 'img/nyskapingsparken-inkubator.svg'}}" alt="Nyskapingsparken Inkubator">
+          </p>
+        </section>
+    </article>
+</main>
+{{/post}}
