@@ -508,12 +508,17 @@ margin on the iframe, cause it breaks stuff. */
   z-index: 10;
   min-height: 100%;
   background: #fff;
-  transition: transform 0.5s ease; }
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease; }
 
 body.nav-opened .site-wrapper {
   overflow-x: hidden;
-  transform: translate3D(-240px, 0, 0);
-  transition: transform 0.3s ease; }
+  -webkit-transform: translate3D(-240px, 0, 0);
+          transform: translate3D(-240px, 0, 0);
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease; }
 
 /* ==========================================================================
    4. General - The main styles for the the theme
@@ -563,15 +568,21 @@ body.nav-opened .nav-cover {
   margin-bottom: 0;
   text-align: left;
   overflow-y: auto;
-  transition: transform 0.5s ease, opacity 0.3s ease 0.7s; }
+  transition: opacity 0.3s ease 0.7s, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.3s ease 0.7s;
+  transition: transform 0.5s ease, opacity 0.3s ease 0.7s, -webkit-transform 0.5s ease; }
 
 body.nav-closed .nav {
-  transform: translate3D(97px, 0, 0); }
+  -webkit-transform: translate3D(97px, 0, 0);
+          transform: translate3D(97px, 0, 0); }
 
 body.nav-opened .nav {
   opacity: 1;
+  transition: opacity 0s ease 0s, -webkit-transform 0.3s ease;
   transition: transform 0.3s ease, opacity 0s ease 0s;
-  transform: translate3D(0, 0, 0); }
+  transition: transform 0.3s ease, opacity 0s ease 0s, -webkit-transform 0.3s ease;
+  -webkit-transform: translate3D(0, 0, 0);
+          transform: translate3D(0, 0, 0); }
 
 .nav-title {
   position: absolute;
@@ -606,10 +617,12 @@ body.nav-opened .nav {
   transition: background 0.15s ease; }
 
 .nav-close:before {
-  transform: rotate(45deg); }
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
 
 .nav-close:after {
-  transform: rotate(-45deg); }
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
 
 .nav-close:hover:before,
 .nav-close:hover:after {
@@ -710,13 +723,16 @@ body.nav-opened .nav {
   text-align: center;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
-  transform: rotate(-90deg);
-  animation: bounce 4s 2s infinite; }
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-animation: bounce 4s 2s infinite;
+          animation: bounce 4s 2s infinite; }
 
 /* Stop it bouncing and increase contrast when hovered */
 .scroll-down:hover {
   color: #fff;
-  animation: none; }
+  -webkit-animation: none;
+          animation: none; }
 
 /* Put a semi-opaque radial gradient behind the icon to make it more visible
    on photos which happen to have a light background. */
@@ -809,7 +825,8 @@ body.nav-opened .nav {
   background: #1C9857;
   border: #1C9857;
   color: #fff;
-  transform: translate3D(94px, 0, 0);
+  -webkit-transform: translate3D(94px, 0, 0);
+          transform: translate3D(94px, 0, 0);
   transition: all 0.3s ease; }
 
 .nav-opened .menu-button .word {
@@ -860,12 +877,16 @@ body.nav-opened .nav {
 
 /* Add subtle load-in animation for content on the home page */
 .home-template .page-title {
-  animation: fade-in-down 0.6s;
-  animation-delay: 0.2s; }
+  -webkit-animation: fade-in-down 0.6s;
+          animation: fade-in-down 0.6s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
 
 .home-template .page-description {
-  animation: fade-in-down 0.9s;
-  animation-delay: 0.1s; }
+  -webkit-animation: fade-in-down 0.9s;
+          animation: fade-in-down 0.9s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
@@ -1074,7 +1095,8 @@ button:hover {
        Works for images that are larger than their containers. */
   position: relative;
   left: 50%;
-  transform: translateX(-50%); }
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
 
 .footnotes {
   font-style: italic;
@@ -1278,17 +1300,21 @@ button:hover {
    7. Read More - Next/Prev Post Links
    ========================================================================== */
 .read-next {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: stretch;
-      align-items: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   margin-top: 10rem; }
 
 .read-next-story {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-positive: 1;
-      flex-grow: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   min-width: 50%;
   text-decoration: none;
   position: relative;
@@ -1565,8 +1591,9 @@ button:hover {
   .no-cover.author-head.main-header {
     padding: 0; }
   .read-next {
-    -ms-flex-direction: column;
-        flex-direction: column;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 4rem; }
   .read-next p {
     display: none; }
@@ -1736,22 +1763,46 @@ button:hover {
    13. Animations
    ========================================================================== */
 /* Used to fade in title/desc on the home page */
+@-webkit-keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 @keyframes fade-in-down {
   0% {
     opacity: 0;
-    transform: translateY(-10px); }
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
   100% {
     opacity: 1;
-    transform: translateY(0); } }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 /* Used to bounce .scroll-down on home page */
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0) rotate(-90deg);
+            transform: translateY(0) rotate(-90deg); }
+  40% {
+    -webkit-transform: translateY(-10px) rotate(-90deg);
+            transform: translateY(-10px) rotate(-90deg); }
+  60% {
+    -webkit-transform: translateY(-5px) rotate(-90deg);
+            transform: translateY(-5px) rotate(-90deg); } }
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0) rotate(-90deg); }
+    -webkit-transform: translateY(0) rotate(-90deg);
+            transform: translateY(0) rotate(-90deg); }
   40% {
-    transform: translateY(-10px) rotate(-90deg); }
+    -webkit-transform: translateY(-10px) rotate(-90deg);
+            transform: translateY(-10px) rotate(-90deg); }
   60% {
-    transform: translateY(-5px) rotate(-90deg); } }
+    -webkit-transform: translateY(-5px) rotate(-90deg);
+            transform: translateY(-5px) rotate(-90deg); } }
 
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
