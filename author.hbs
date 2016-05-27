@@ -7,7 +7,8 @@
 {{#author}}
     <header class="main-header author-head {{#if cover}}" style="background-image: url({{cover}}){{else}}no-cover{{/if}}">
         <nav class="main-nav overlay clearfix">
-            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+          {{#if cover}}{{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}{{/if}}
+          {{#unless cover}}<a class="blog-logo" href="{{@blog.url}}"><img src="http://cl.ly/431r020q341f/blog%20logo.color.svg" alt="{{@blog.title}}" /></a>{{/unless}}
             {{#if @blog.navigation}}
                 <a class="menu-button icon-menu" href="#"><span class="word">Meny</span></a>
             {{/if}}
