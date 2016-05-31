@@ -7,6 +7,16 @@
 {{#foreach posts}}
 <article class="{{post_class}}">
 
+        {{#if @first}}
+        <header class="post-header">
+            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        </header>
+        {{#if image}}
+        <a class="post-image" style="background-image: url({{image}})" href="{{url}}"></a>
+        {{/if}}
+        {{/if}}
+
+        {{#unless @first}}
         {{#if image}}
     <a class="post-image" style="background-image: url({{image}})" href="{{url}}"></a>
         {{/if}}
@@ -14,6 +24,7 @@
     <header class="post-header">
         <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
     </header>
+    {{/unless}}
     <section class="post-excerpt">
         <p>{{excerpt words="26"}}…
             <a class="read-more" href="{{url}}">Les mer &raquo;</a></p>
