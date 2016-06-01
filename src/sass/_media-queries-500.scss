@@ -246,11 +246,12 @@
         height: 20vh;
     }
 
+    .post-footer .author-image {
+        top: -60px;
+    }
+
     .author-profile .author-image {
         margin-top: -70px;
-    }
-    .author-image{
-        top: -60px;
     }
 
     .author-profile .author-meta span {
@@ -259,6 +260,14 @@
 
     .archive-template .main-header .page-description {
         display: none;
+    }
+
+    .gh-subscribe {
+        padding: 15px;
+    }
+
+    .gh-subscribe form {
+      margin-top: 10px;
     }
 
     .read-next {

@@ -1,9 +1,9 @@
 {{!< default}}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
+{{!-- The comment above "< default" means - insert everything in this file into
+    the {{{body}}} of the default.hbs template, containing the blog header/footer. --}}
 
-{{! Everything inside the #post tags pulls data from the post }}
+{{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
 <header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
@@ -22,7 +22,7 @@
         <header class="post-header">
             <h1 class="post-title">{{title}}</h1>
             <section class="post-meta">
-                Publisert <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD.MM.YYYY"}}</time> {{tags prefix=" | "}}
+                Publisert <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD.MM.YYYY"}}</time> {{tags prefix=" | "}}
             </section>
         </header>
 
@@ -32,12 +32,12 @@
 
         <footer class="post-footer">
 
-        {{! Everything inside the #author tags pulls data from the author }}
+        {{!-- Everything inside the #author tags pulls data from the author --}}
         {{#author}}
 
             {{#if image}}
             <figure class="author-image">
-                <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s bilde</span></a>
+                <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}s bilde</span></a>
             </figure>
             {{/if}}
 
@@ -73,11 +73,21 @@
                 </a>
             </section>
 
+            {{!-- Email subscribe form at the bottom of the page --}}
+            {{#if @labs.subscribers }}
+            <section class="gh-subscribe">
+                <h3 class="gh-subscribe-title">Abonner på {{@blog.title}}</h3>
+                <p>Få de nyeste innleggene levert direkte til innboksen din.</p>
+                {{subscribe_form placeholder="Eposten din"}}
+                <span class="gh-subscribe-rss">eller abonnér <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">med RSS</a> gjennom Feedly!</span>
+            </section>
+            {{/if}}
         </footer>
 
     </article>
 </main>
 
+{{!-- Links to Previous/Next posts --}}
 <aside class="read-next">
     {{#next_post}}
     <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
