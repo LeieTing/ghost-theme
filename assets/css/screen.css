@@ -2657,14 +2657,16 @@ textarea, select, input {
   border: #e7eef2 1px solid;
   border-radius: 4px;
   box-shadow: none;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  transition: all ease 0.5s; }
 
 textarea {
   width: 100%;
   max-width: 340px;
   min-width: 250px;
   height: auto;
-  min-height: 80px; }
+  min-height: 80px;
+  transition: all ease 0.5s; }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -2683,7 +2685,8 @@ textarea:focus {
   border: #bbc7cc 1px solid;
   background: #fff;
   outline: none;
-  outline-width: 0; }
+  outline-width: 0;
+  transition: all ease 0.2s; }
 
 select {
   width: 270px;
@@ -2709,7 +2712,7 @@ button {
   text-shadow: none;
   border-radius: 0.3rem;
   border: rgba(0, 0, 0, 0.05) 0.1em solid;
-  background: #5ba4e5; }
+  background: #32AE6B; }
 
 /* ==========================================================================
    3. Utilities - These things get used a lot
@@ -3249,27 +3252,6 @@ body:not(.post-template) .post-title {
   margin-bottom: 1.8rem;
   display: block; }
 
-button {
-  background: #32AE6B;
-  color: white;
-  border: none;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0.6rem 1.5rem; }
-
-button:hover {
-  background: #1C9857; }
-
-.text-input {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
-
-.postal-code {
-  max-width: 70%; }
-
-.postal-area {
-  max-width: 30%; }
-
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
@@ -3773,12 +3755,10 @@ button:hover {
   box-sizing: border-box;
   width: 100%;
   margin: 0;
-  border-radius: 4px 0 0 4px;
-  transition: all ease 0.5s; }
+  border-radius: 4px 0 0 4px; }
 
 .gh-subscribe .subscribe-email:focus {
-  border: #5ba4e5 1px solid;
-  transition: all ease 0.2s; }
+  border: #5ba4e5 1px solid; }
 
 .gh-subscribe button {
   margin-left: -1px;
