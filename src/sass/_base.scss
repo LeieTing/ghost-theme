@@ -278,6 +278,8 @@ textarea, select, input {
     border-radius: 4px;
     box-shadow: none;
     -webkit-appearance: none;
+
+    transition: all ease 0.5s;
 }
 
 textarea {
@@ -286,6 +288,8 @@ textarea {
     min-width: 250px;
     height: auto;
     min-height: 80px;
+
+    transition: all ease 0.5s;
 }
 
 input[type="text"]:focus,
@@ -306,6 +310,8 @@ textarea:focus {
     background: #fff;
     outline: none;
     outline-width: 0;
+
+    transition: all ease 0.2s;
 }
 
 select {
