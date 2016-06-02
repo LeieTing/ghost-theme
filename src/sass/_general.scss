@@ -550,3 +550,15 @@ body:not(.post-template) .post-title {
     margin-bottom: 1.8rem;
     display: block;
 }
+
+.accentuated-section {
+    border: #e7eef2 1px solid;
+    padding: 3rem;
+    margin-top: 3rem;
+    background: #f5f8fa;
+    border-radius: 5px;
+
+    h3 {
+      font-size: 2.4rem;
+    }
+}

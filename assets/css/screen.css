@@ -3252,6 +3252,15 @@ body:not(.post-template) .post-title {
   margin-bottom: 1.8rem;
   display: block; }
 
+.accentuated-section {
+  border: #e7eef2 1px solid;
+  padding: 3rem;
+  margin-top: 3rem;
+  background: #f5f8fa;
+  border-radius: 5px; }
+  .accentuated-section h3 {
+    font-size: 2.4rem; }
+
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
@@ -3724,12 +3733,7 @@ body:not(.post-template) .post-title {
    10. Subscribe - Generate those email subscribers
    ========================================================================== */
 .gh-subscribe {
-  border: #e7eef2 1px solid;
-  padding: 3rem;
-  margin-top: 3rem;
-  text-align: center;
-  background: #f5f8fa;
-  border-radius: 5px; }
+  text-align: center; }
 
 .gh-subscribe-title {
   margin-bottom: 0;
