@@ -21,6 +21,23 @@
             e.preventDefault();
             $("body").toggleClass("nav-opened nav-closed");
         });
+
+        $('#input-form').one('submit', function () {
+            var inputq1 = encodeURIComponent($('#input-q1').val());
+            var inputq2 = encodeURIComponent($('#input-q2').val());
+            var inputq3 = encodeURIComponent($('#input-q3').val());
+            var inputq4 = encodeURIComponent($('#input-q4').val());
+            var q1ID = "entry.1000020";
+            var q2ID = "entry.2027300098";
+            var q3ID = "entry.678889889";
+            var q4ID = "entry.1068864635";
+            var baseURL = 'https://docs.google.com/forms/d/13yeUeDp_silzu_--Ew8y-zq_DBKVE0eepepkNospKjE/formResponse?';
+            var submitRef = '&submit=Submit';
+            var submitURL = baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + "&" + q3ID + "=" + inputq3 + "&" + q4ID + "=" + inputq4 + submitRef;
+            console.log(submitURL);
+            $(this)[0].action = submitURL;
+            $("#form-submit").text("💌 Klistremerker på vei!");
+        });
     });
 
     // Arctic Scroll by Paul Adam Davis
