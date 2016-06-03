@@ -5,6 +5,7 @@
     "start": "gulp watch"
   },
   "devDependencies": {
+    "bulma": "0.0.28",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
