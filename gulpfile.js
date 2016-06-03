@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
+var babel = require('gulp-babel');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('styles', function() {
@@ -16,8 +17,17 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('default', ['styles']);
+gulp.task('scripts', function() {
+  return gulp.src('src/js/**/*.js')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(gulp.dest('assets/js'));
+})
+
+gulp.task('default', ['styles', 'scripts']);
 
 gulp.task('watch', ['default'], function() {
+  gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('src/sass/**/*.scss', ['styles']);
 });
