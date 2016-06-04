@@ -19,9 +19,11 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
   return gulp.src('src/js/**/*.js')
+    .pipe(sourcemaps.init())
     .pipe(babel({
       presets: ['es2015']
     }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/js'));
 })
 
