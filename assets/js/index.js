@@ -73,7 +73,7 @@
                 text: resultMessage
             }).hide();
 
-            $form.before($resultMessage).fadeOut().queue(function () {
+            $form.before($resultMessage).fadeOut(function () {
                 $resultMessage.fadeIn();
             });
         });

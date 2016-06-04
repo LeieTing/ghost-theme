@@ -75,8 +75,7 @@
 
         $form
           .before($resultMessage)
-          .fadeOut()
-          .queue(() => { $resultMessage.fadeIn() });
+          .fadeOut(() => { $resultMessage.fadeIn() });
       });
     };
 })(jQuery);
