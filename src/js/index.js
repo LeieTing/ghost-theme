@@ -58,24 +58,14 @@
   };
 
   $.fn.activateGoogleForm = function() {
-    let url = this.attr('action');
     let resultMessage = this.data('result-message');
+    let $resultMessage = $('<div>', {
+      class: 'has-text-centered',
+      text: resultMessage
+    }).hide();
 
     this.one('submit', function(e) {
-      let $form = $(this);
-      let values = $form.serialize();
-      let submitURL = url;
-      submitURL += '?';
-      submitURL += values;
-      submitURL += '&submit=Submit';
-      e.target.action = submitURL;
-
-      let $resultMessage = $('<div>', {
-        class: 'has-text-centered',
-        text: resultMessage
-      }).hide();
-
-      $form
+      $(this)
         .before($resultMessage)
         .fadeOut(() => { $resultMessage.fadeIn() });
     });
