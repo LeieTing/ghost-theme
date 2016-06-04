@@ -17,6 +17,16 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('assets/css'));
 });
 
+gulp.task('production-styles', function() {
+  return gulp.src('src/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(concat('screen.css'))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions']
+    }))
+    .pipe(gulp.dest('assets/css'));
+});
+
 gulp.task('scripts', function() {
   return gulp.src('src/js/**/*.js')
     .pipe(sourcemaps.init())
@@ -26,6 +36,16 @@ gulp.task('scripts', function() {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/js'));
 })
+
+gulp.task('production-scripts', function() {
+  return gulp.src('src/js/**/*.js')
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(gulp.dest('assets/js'));
+})
+
+gulp.task('production', ['production-styles', 'production-scripts']);
 
 gulp.task('default', ['styles', 'scripts']);
 
