@@ -24,31 +24,7 @@
 
         $('#google-form').activateGoogleForm();
 
-        $('#postnummer').on('change input', function (e) {
-            var postnummer = e.target.value;
-            var $poststed = $('#poststed');
-
-            if (postnummer.length < 4) {
-                return $poststed.val('');
-            }
-
-            // Set loading state
-            var $loadingElement = $poststed.parent();
-            $loadingElement.toggleClass('is-loading', true);
-
-            $.getJSON('https://api.bring.com/shippingguide/api/postalCode.json', {
-                clientUrl: window.location.href,
-                pnr: postnummer
-            }).done(function (response) {
-                var value = '';
-                if (response.valid) {
-                    value = response.result;
-                }
-                $poststed.val(value);
-            }).always(function () {
-                $loadingElement.toggleClass('is-loading', false);
-            });
-        });
+        $('#postnummer').activatePostalLookup();
     });
 
     // Arctic Scroll by Paul Adam Davis
@@ -101,6 +77,35 @@
 
             $form.before($resultMessage).fadeOut(function () {
                 $resultMessage.fadeIn();
+            });
+        });
+    };
+
+    $.fn.activatePostalLookup = function () {
+        var $elem = $(this);
+        var $poststed = $('#poststed');
+        var $loadingElement = $poststed.parent();
+
+        $elem.on('change input', function (e) {
+            var postnummer = e.target.value;
+
+            if (postnummer.length < 4) {
+                return $poststed.val('');
+            }
+
+            $loadingElement.toggleClass('is-loading', true);
+
+            $.getJSON('https://api.bring.com/shippingguide/api/postalCode.json', {
+                clientUrl: window.location.href,
+                pnr: postnummer
+            }).done(function (response) {
+                var value = '';
+                if (response.valid) {
+                    value = response.result;
+                }
+                $poststed.val(value);
+            }).always(function () {
+                $loadingElement.toggleClass('is-loading', false);
             });
         });
     };

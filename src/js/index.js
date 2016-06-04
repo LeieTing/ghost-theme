@@ -22,33 +22,7 @@
 
         $('#google-form').activateGoogleForm();
 
-        $('#postnummer').on('change input', function (e) {
-          let postnummer = e.target.value;
-          let $poststed = $('#poststed');
-
-          if (postnummer.length < 4) {
-            return $poststed.val('');
-          }
-
-          // Set loading state
-          let $loadingElement = $poststed.parent();
-          $loadingElement.toggleClass('is-loading', true);
-
-          $.getJSON('https://api.bring.com/shippingguide/api/postalCode.json', {
-            clientUrl: window.location.href,
-            pnr: postnummer
-          })
-            .done((response) => {
-              let value = '';
-              if (response.valid) {
-                value = response.result;
-              }
-              $poststed.val(value);
-            })
-            .always(() => {
-              $loadingElement.toggleClass('is-loading', false);
-            });
-        });
+        $('#postnummer').activatePostalLookup();
     });
 
     // Arctic Scroll by Paul Adam Davis
@@ -105,5 +79,36 @@
           .before($resultMessage)
           .fadeOut(() => { $resultMessage.fadeIn() });
       });
+    };
+
+    $.fn.activatePostalLookup = function() {
+        let $elem = $(this);
+        let $poststed = $('#poststed');
+        let $loadingElement = $poststed.parent();
+
+        $elem.on('change input', function (e) {
+          let postnummer = e.target.value;
+
+          if (postnummer.length < 4) {
+            return $poststed.val('');
+          }
+
+          $loadingElement.toggleClass('is-loading', true);
+
+          $.getJSON('https://api.bring.com/shippingguide/api/postalCode.json', {
+            clientUrl: window.location.href,
+            pnr: postnummer
+          })
+            .done((response) => {
+              let value = '';
+              if (response.valid) {
+                value = response.result;
+              }
+              $poststed.val(value);
+            })
+            .always(() => {
+              $loadingElement.toggleClass('is-loading', false);
+            });
+        });
     };
 })(jQuery);
