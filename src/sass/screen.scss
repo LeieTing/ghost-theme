@@ -21,7 +21,23 @@
 
 */
 
-@import 'normalize';
+
+// Changing Bulma variables
+$primary: #32AE6C;
+
+@import '../../node_modules/bulma/sass/utilities/functions';
+@import '../../node_modules/bulma/sass/utilities/mixins';
+@import '../../node_modules/bulma/sass/utilities/variables';
+@import '../../node_modules/bulma/sass/utilities/reset';
+@import '../../node_modules/bulma/sass/utilities/controls';
+@import '../../node_modules/bulma/sass/utilities/animations';
+@import '../../node_modules/bulma/sass/base/base';
+@import '../../node_modules/bulma/sass/elements/button';
+@import '../../node_modules/bulma/sass/elements/other';
+@import '../../node_modules/bulma/sass/elements/form';
+
+@import '../../node_modules/bulma/sass/components/grid';
+
 @import 'icons';
 @import 'font-awesome-icons';
 @import 'base';
