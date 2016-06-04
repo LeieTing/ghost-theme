@@ -288,28 +288,6 @@ textarea {
     transition: all ease 0.5s;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-textarea:focus {
-    // border: #bbc7cc 1px solid;
-    background: #fff;
-    outline: none;
-    outline-width: 0;
-
-    transition: all ease 0.2s;
-}
-
 select {
     width: 270px;
     height: 30px;
