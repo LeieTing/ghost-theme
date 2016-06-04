@@ -83,8 +83,8 @@
 
     $.fn.activatePostalLookup = function () {
         var $elem = $(this);
-        var $poststed = $('#poststed');
-        var $loadingElement = $poststed.parent();
+        var $poststed = $($elem.data('place-element'));
+        var $loadingElement = $($elem.data('place-loading-element'));
 
         $elem.on('change input', function (e) {
             var postnummer = e.target.value;
