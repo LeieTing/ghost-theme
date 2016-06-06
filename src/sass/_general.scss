@@ -573,3 +573,12 @@ body:not(.post-template) .post-title {
     list-style-type: disc;
   }
 }
+img.emojione {
+    height: auto;
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    left: inherit;
+    transform: inherit;
+    padding: inherit;
+}

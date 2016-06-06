@@ -5257,6 +5257,15 @@ body:not(.post-template) .post-title {
 .post-content ul {
   list-style-type: disc; }
 
+img.emojione {
+  height: auto;
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  left: inherit;
+  transform: inherit;
+  padding: inherit; }
+
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
