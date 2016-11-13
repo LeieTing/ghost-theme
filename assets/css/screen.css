@@ -5311,6 +5311,16 @@ img.emojione {
   left: 50%;
   transform: translateX(-50%); }
 
+.side-by-side {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
 .footnotes {
   font-style: italic;
   font-size: 1.3rem;
