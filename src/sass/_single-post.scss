@@ -55,6 +55,13 @@
     transform: translateX(-50%);
 }
 
+.side-by-side {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .footnotes {
     font-style: italic;
     font-size: 1.3rem;

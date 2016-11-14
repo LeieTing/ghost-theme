@@ -2097,7 +2097,6 @@ table {
         flex-wrap: wrap; }
   .columns.is-vcentered {
     -ms-flex-align: center;
-        -ms-grid-row-align: center;
         align-items: center; }
   @media screen and (min-width: 769px) {
     .columns:not(.is-desktop) {
@@ -2110,7 +2109,6 @@ table {
 
 .tile {
   -ms-flex-align: stretch;
-      -ms-grid-row-align: stretch;
       align-items: stretch;
   -ms-flex: 1;
       flex: 1; }
@@ -2376,8 +2374,7 @@ table {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
-          filter: none; }
+  filter: none; }
 
 .fa-stack {
   position: relative;
@@ -5313,6 +5310,16 @@ img.emojione {
   position: relative;
   left: 50%;
   transform: translateX(-50%); }
+
+.side-by-side {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .footnotes {
   font-style: italic;
