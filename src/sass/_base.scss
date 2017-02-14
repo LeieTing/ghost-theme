@@ -125,7 +125,7 @@ hr {
     padding: 0;
 }
 
-blockquote {
+.blockquote {
   box-sizing: border-box;
   margin: 1.75em 0 1.75em -2.2em;
   padding: 0 0 0 1.75em;
@@ -156,6 +156,37 @@ blockquote {
   }
 }
 
+blockquote,
+.pullquote {
+  box-sizing: border-box;
+  margin: 1.75em 0 1.75em -2.2em;
+  padding: 0 0 0 1.75em;
+  border-left: #4A4A4A 0.4em solid;
+
+  p {
+    margin: 0.8em 0;
+    font-style: italic;
+  }
+
+  small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size: 0.9em;
+    color: #CCC;
+
+    &:before {
+      content: "\2014 \00A0";
+    }
+  }
+
+  cite {
+    font-weight: 700;
+
+    a {
+      font-weight: normal;
+    }
+  }
+}
 
 mark {
     background-color: #fdffb6;
