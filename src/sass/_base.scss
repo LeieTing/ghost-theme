@@ -134,6 +134,10 @@ blockquote {
   padding-top: 0;
   padding-bottom: 0;
 
+  p {
+    margin: 0.8em 0;
+  }
+
   small {
     display: inline-block;
     margin: 0.8em 0 0.8em 1.5em;
@@ -156,33 +160,19 @@ blockquote {
 
 blockquote,
 .pullquote {
-  margin-right: 0;
-  margin-left: -2.2em;
-
-  padding-right: 0;
   padding-left: 1.75em;
-
-  border-left: #4A4A4A 0.4em solid;
-
-  p {
-    margin: 0.8em 0;
-    font-style: italic;
-  }
+  font-size: 1.15em;
+  font-style: italic;
 }
 
 .blockquote {
-  margin-right: 0;
+  // Overriding the font-size set on pullquotes
+  font-size: 1em;
+
   margin-left: -2.2em;
-
-  padding-right: 0;
   padding-left: 1.75em;
-
   border-left: #4A4A4A 0.4em solid;
-
-  p {
-    margin: 0.8em 0;
-    font-style: italic;
-  }
+  font-style: normal;
 }
 
 mark {
