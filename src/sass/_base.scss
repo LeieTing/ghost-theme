@@ -166,13 +166,13 @@ blockquote,
 }
 
 .blockquote {
-  // Overriding the font-size set on pullquotes
+  // Overriding things set on pullquotes
   font-size: 1em;
+  font-style: normal;
 
   margin-left: -2.2em;
   padding-left: 1.75em;
   border-left: #4A4A4A 0.4em solid;
-  font-style: normal;
 }
 
 mark {
