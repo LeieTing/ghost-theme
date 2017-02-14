@@ -154,7 +154,8 @@ blockquote {
   }
 }
 
-.blockquote {
+blockquote,
+.pullquote {
   margin-right: 0;
   margin-left: -2.2em;
 
@@ -169,8 +170,7 @@ blockquote {
   }
 }
 
-blockquote,
-.pullquote {
+.blockquote {
   margin-right: 0;
   margin-left: -2.2em;
 
