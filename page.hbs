@@ -8,7 +8,8 @@
 
 <header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
     <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        {{#if image}}{{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}{{/if}}
+        {{#unless image}}<a class="blog-logo" href="{{@blog.url}}"><img src="http://cl.ly/431r020q341f/blog%20logo.color.svg" alt="{{@blog.title}}" /></a>{{/unless}}
         {{#if @blog.navigation}}
             <a class="menu-button icon-menu" href="#"><span class="word">Meny</span></a>
         {{/if}}
